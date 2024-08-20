@@ -12,7 +12,24 @@ function returnMovies(url) {
     .then(function(data){
         console.log(data.results);
         data.results.forEach(element => {
-            const div = document.createElement("div");
+            const div_card = document.createElement("div");
+            const div_row = document.createElement("div");
+            const div_column = document.createElement("div");
+            const image = document.createElement("img");
+            const title = document.createElement("h3");
+            const centre = document.createElement("centre");
+
+            title.innerHTML = `${element}`;
+            image.src = IMG_PATH + element.poster_path;
+
+            centre.appendChild(image);
+            div_card.appendChild(centre);
+            div_card.appendChild(title);
+            div_column.appendChild(div_card);
+            div_row.appendChild(div_column);
+
+            main.appendChild(div_row);
+
         });
     });
 }
