@@ -28,13 +28,14 @@ function returnMovies(url) {
             const title = document.createElement("h3");
             title.setAttribute("id", "title");
 
-            const centre = document.createElement("centre");
-
-            title.innerHTML = `${element}`;
+            title.innerHTML = `${element.title}`;
             image.src = IMG_PATH + element.poster_path;
 
-            centre.appendChild(image);
-            div_card.appendChild(centre);
+            const centerDiv = document.createElement('div');
+            centerDiv.style.textAlign = 'center'; // Center horizontally
+            centerDiv.appendChild(image);
+
+            div_card.appendChild(centerDiv);
             div_card.appendChild(title);
             div_column.appendChild(div_card);
             div_row.appendChild(div_column);

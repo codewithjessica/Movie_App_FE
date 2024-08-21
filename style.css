@@ -13,7 +13,7 @@ h3 {
 
 .topnav {
     overflow: hidden;
-    background-color: 131720;
+    background-color: #131720;
     padding: 10px;
 }
 
@@ -52,14 +52,23 @@ input {
 
 .thumbnail {
     height: 350px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 19px;
+}
+
+.row {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .column {
     float: left;
     width: 25%;
     padding: 10px 10px;
+    flex: 1;
+    min-width: 250px;
 }
 
 .card {
