@@ -67,6 +67,7 @@ input {
     width: 25%;
     padding: 10px 10px;
     min-width: 305px;
+    max-width: 310px;
 }
 
 .card {
